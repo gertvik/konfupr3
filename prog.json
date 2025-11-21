@@ -1,0 +1,8 @@
+{
+    "instructions": [
+      { "op": "LOAD", "args": { "dst": 1, "value": 10 } },
+      { "op": "ADD",  "args": { "dst": 1, "a": 1, "b": 2 } },
+      { "op": "HALT", "args": {} }
+    ]
+  }
+  
