@@ -3,6 +3,7 @@ package main
 import (
 	"practica3/internal/asmjson"
 	"practica3/internal/cli"
+	"practica3/internal/emitter"
 	"practica3/internal/printer"
 )
 
@@ -18,10 +19,19 @@ func main() {
 	}
 
 	if flags.TestMode {
+		// Печать IR
 		printer.PrintProgram(program)
+
+		// Печать бинарного кода
+		emitter.PrintBinary(program)
 		return
 	}
 
-	// Этап 2
-	// emitter.WriteBinary(program, flags.OutPath)
+	// Этап 2 — запись бинарного файла
+	size, err := emitter.WriteBinary(program, flags.OutPath)
+	if err != nil {
+		cli.Die(err)
+	}
+
+	println("Written bytes:", size)
 }
