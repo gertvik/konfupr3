@@ -1,8 +1,8 @@
 {
-    "instructions": [
-      { "op": "LOAD", "args": { "dst": 1, "value": 10 } },
-      { "op": "ADD",  "args": { "dst": 1, "a": 1, "b": 2 } },
-      { "op": "HALT", "args": {} }
-    ]
-  }
-  
+  "instructions": [
+    { "op": "LOAD_CONST", "args": { "value": 703 } },
+    { "op": "LOAD_MEM",   "args": {} },
+    { "op": "STORE_MEM",  "args": { "addr": 389 } },
+    { "op": "NEG",        "args": {} }
+  ]
+}

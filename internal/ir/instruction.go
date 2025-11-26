@@ -5,6 +5,10 @@ import "fmt"
 type Opcode int
 
 const (
+	OpLoadConst Opcode = iota
+	OpLoadMem
+	OpStoreMem
+	OpNeg
 	OpLoad Opcode = iota
 	OpStore
 	OpAdd
@@ -16,20 +20,14 @@ const (
 
 func parseOpcode(op string) (Opcode, error) {
 	switch op {
-	case "LOAD":
-		return OpLoad, nil
-	case "STORE":
-		return OpStore, nil
-	case "ADD":
-		return OpAdd, nil
-	case "SUB":
-		return OpSub, nil
-	case "MUL":
-		return OpMul, nil
-	case "JUMP":
-		return OpJump, nil
-	case "HALT":
-		return OpHalt, nil
+	case "LOAD_CONST":
+		return OpLoadConst, nil
+	case "LOAD_MEM":
+		return OpLoadMem, nil
+	case "STORE_MEM":
+		return OpStoreMem, nil
+	case "NEG":
+		return OpNeg, nil
 	}
 	return 0, fmt.Errorf("unknown opcode: %s", op)
 }
