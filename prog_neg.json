@@ -1,0 +1,8 @@
+{
+  "instructions": [
+    { "op": "LOAD_CONST", "args": { "value": 21 } },
+    { "op": "NEG", "args": {} },
+    { "op": "STORE_MEM", "args": { "addr": 128 } }
+  ]
+}
+
