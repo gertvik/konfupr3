@@ -1,0 +1,18 @@
+{
+  "instructions": [
+    { "op": "LOAD_CONST", "args": { "value": 77 } },
+    { "op": "STORE_MEM", "args": { "addr": 10 } },
+    { "op": "LOAD_CONST", "args": { "value": 10 } },
+    { "op": "LOAD_MEM", "args": {} },
+    { "op": "NEG", "args": {} },
+    { "op": "STORE_MEM", "args": { "addr": 20 } },
+
+    { "op": "LOAD_CONST", "args": { "value": 512 } },
+    { "op": "STORE_MEM", "args": { "addr": 11 } },
+    { "op": "LOAD_CONST", "args": { "value": 11 } },
+    { "op": "LOAD_MEM", "args": {} },
+    { "op": "NEG", "args": {} },
+    { "op": "STORE_MEM", "args": { "addr": 21 } }
+  ]
+}
+

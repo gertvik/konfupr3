@@ -1,0 +1,16 @@
+{
+  "instructions": [
+    { "op": "LOAD_CONST", "args": { "value": 888 } },
+    { "op": "NEG", "args": {} },
+    { "op": "STORE_MEM", "args": { "addr": 300 } },
+
+    { "op": "LOAD_CONST", "args": { "value": 17 } },
+    { "op": "STORE_MEM", "args": { "addr": 301 } },
+
+    { "op": "LOAD_CONST", "args": { "value": 301 } },
+    { "op": "LOAD_MEM", "args": {} },
+    { "op": "NEG", "args": {} },
+    { "op": "STORE_MEM", "args": { "addr": 302 } }
+  ]
+}
+
