@@ -27,15 +27,19 @@ func (it *Interpreter) LoadBinary(path string) error {
 	if err != nil {
 		return err
 	}
+	it.LoadBytes(data)
+	return nil
+}
 
+// LoadBytes — вспомогательный метод, позволяющий загрузить машинный код
+// непосредственно из слайса байт (удобно для тестов).
+func (it *Interpreter) LoadBytes(data []byte) {
 	it.CodeSize = len(data)
-
-	// Загружаем машинный код в память, начиная с адреса 0.
 	for i, b := range data {
 		it.Mem.Write(i, int(b))
 	}
-
-	return nil
+	it.PC = 0
+	it.Acc = 0
 }
 
 func (it *Interpreter) Step() bool {
