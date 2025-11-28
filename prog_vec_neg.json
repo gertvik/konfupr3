@@ -1,0 +1,47 @@
+{
+  "instructions": [
+    { "op": "LOAD_CONST", "args": { "value": 5 } },
+    { "op": "STORE_MEM", "args": { "addr": 100 } },
+    { "op": "LOAD_CONST", "args": { "value": 13 } },
+    { "op": "STORE_MEM", "args": { "addr": 101 } },
+    { "op": "LOAD_CONST", "args": { "value": 0 } },
+    { "op": "STORE_MEM", "args": { "addr": 102 } },
+    { "op": "LOAD_CONST", "args": { "value": 255 } },
+    { "op": "STORE_MEM", "args": { "addr": 103 } },
+    { "op": "LOAD_CONST", "args": { "value": 1024 } },
+    { "op": "STORE_MEM", "args": { "addr": 104 } },
+    { "op": "LOAD_CONST", "args": { "value": 4095 } },
+    { "op": "STORE_MEM", "args": { "addr": 105 } },
+
+    { "op": "LOAD_CONST", "args": { "value": 100 } },
+    { "op": "LOAD_MEM", "args": {} },
+    { "op": "NEG", "args": {} },
+    { "op": "STORE_MEM", "args": { "addr": 200 } },
+
+    { "op": "LOAD_CONST", "args": { "value": 101 } },
+    { "op": "LOAD_MEM", "args": {} },
+    { "op": "NEG", "args": {} },
+    { "op": "STORE_MEM", "args": { "addr": 201 } },
+
+    { "op": "LOAD_CONST", "args": { "value": 102 } },
+    { "op": "LOAD_MEM", "args": {} },
+    { "op": "NEG", "args": {} },
+    { "op": "STORE_MEM", "args": { "addr": 202 } },
+
+    { "op": "LOAD_CONST", "args": { "value": 103 } },
+    { "op": "LOAD_MEM", "args": {} },
+    { "op": "NEG", "args": {} },
+    { "op": "STORE_MEM", "args": { "addr": 203 } },
+
+    { "op": "LOAD_CONST", "args": { "value": 104 } },
+    { "op": "LOAD_MEM", "args": {} },
+    { "op": "NEG", "args": {} },
+    { "op": "STORE_MEM", "args": { "addr": 204 } },
+
+    { "op": "LOAD_CONST", "args": { "value": 105 } },
+    { "op": "LOAD_MEM", "args": {} },
+    { "op": "NEG", "args": {} },
+    { "op": "STORE_MEM", "args": { "addr": 205 } }
+  ]
+}
+
